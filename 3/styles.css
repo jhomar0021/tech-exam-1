@@ -1,0 +1,231 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("https://s3-alpha-sig.figma.com/img/0124/e327/82a67cb60dac1944782fbe368f616907?Expires=1695600000&Signature=hDym1jeA5HMPRH6K~5IfxLdGDw115H-BVRHW8pbquQSO2onzD~1xJsxSDoi2XGrJNcSpd150FmCd1TrDTcuwWTeepKPTrzFr~E~kmrTQh1nvinODBBMROHO1EHIplv0MJzBEMkO1UXU14NCcuiLUnpFK5Zu27GGPBMwuX~u2biEZp9qREsHf1F7XHaFGQJz3YvQEhJTyjOQtjVZPLLsBbONgcwJjRwvZOlhjPdgDc7nHBuLJkdCYPhBBIadZ1dVd~yfgnujv2bvRx5C2ovNiEG7QnXFrEcoRgTrUVJMHRdxbdHk33wCndklhUbu5hf8KEqg2nodYqC7dTiISCKibmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100svh;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+    height: 1%;
+    opacity: .3;
+  }
+
+.player {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.background {
+    opacity: .7;
+    z-index: -2;
+    position: absolute;
+    width: 100svw;
+    height: 100svh;
+    background-color: white;
+}
+
+.img-container {
+    position: relative;
+    margin-bottom: 10%;
+}
+
+.cover {
+    position: absolute;
+    z-index: 2;
+    width: 55%;
+    margin-left: 12%;
+    margin-top: 51px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vinyl {
+    background-color: transparent;
+    width: 55%;
+    margin-left: 35%;
+    margin-top: 51px;
+}
+
+.label {
+    margin-bottom: 10%;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-family: Noto Sans;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+h2 {
+    line-height: 0;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    font-family: Noto Sans;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+p {
+    color: black;
+    font-size: 12px;
+    font-family: Noto Sans;
+    font-weight: 300;
+    word-wrap: break-word
+}
+
+.timer {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.duration {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.buttons {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-bottom: 10%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 25%;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button i {
+    color: #632964;
+    font-size: 3svw;
+}
+
+.play {
+    background-color: #632964;
+    border-radius: 50px;
+    width: 30%;
+    aspect-ratio: 1;
+}
+
+.fa-play {
+    color: white;
+    font-size: 3svw;
+}
+
+.fa-pause {
+    color: white;
+    font-size: 3svw;
+}
+
+.animate-spin {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+input[type="range"] {
+    accent-color: #632964;
+}
+
+.api-options {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.api-text {
+    color: white;
+    font-size: 30px;
+    font-family: Noto Sans;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+
+.api-option {
+    opacity: 0.6;
+    color: white;
+    font-size: 20px;
+    font-family: Noto Sans;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.Albums-container{
+    margin-top: 5%;
+    overflow-x: scroll;
+    height: 50svh;
+    display: flex;
+}
+.album-img{
+    width: 40svh;
+    margin-right:  5svh; 
+}
+.Albums-container p{
+    line-height: 1px;
+    color: white;
+    font-family: Noto Sans;
+    /* display: flex;
+    overflow-x: scroll; */
+}
+
+.Artist-container{
+    margin-top: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 70svh;
+    display: flex;
+}
+.artist-img{
+    width: 40svh;
+    margin-right:  5svh; 
+}
+.Artist-container p{
+    line-height: 1px;
+    color: white;
+    font-family: Noto Sans;
+    /* display: flex;
+    overflow-x: scroll; */
+}

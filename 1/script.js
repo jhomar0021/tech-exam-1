@@ -4,16 +4,20 @@ const musicPlayButton = document.getElementById("musicPlayButton");
 const musicPlayIcon = document.getElementById("musicPlaySymbol");
 const musicPauseIcon = document.getElementById("musicPauseSymbol");
 const musicRecord = document.getElementById("musicRecordImage");
-let minutes = 0;
-let seconds = 0;
+let minutes ;
+let seconds ;
 
 const musicBackButton = document.getElementById("musicBackButton");
 const musicForwardButton = document.getElementById("musicForwardButton");
 
 
 let playing = false;
-let Duration = 0;
+let Duration = musicSlider.value;
 
+
+musicSlider.addEventListener("change", ()=>{
+    timer();
+})
 musicPlayButton.addEventListener("click", () => {
     if(playing == false){
         play();
@@ -50,17 +54,15 @@ function pause(){
 
 function timer(){
     if(musicSlider.value == 613){
-        reset();
+        pause();
     }
     else{
-    Duration +=1;
-    musicSlider.value = Duration;
+    musicSlider.value ++;
+    console.log(musicSlider.value);
 
-    seconds += 1;
-    if(seconds == 60) {
-        seconds = 0;
-        minutes++;
-    }
+    minutes = Math.floor((musicSlider.value) / 60);
+	seconds = musicSlider.value % 60;
+
 
     
     let m = minutes < 10 ? "0" + minutes : minutes;
